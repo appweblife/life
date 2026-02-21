@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <title>HTMLきほん-web・アプリさくせい　気楽にチャレンジ・いろいろ確認！</title>
+    <LINK rel="stylesheet" href="../css-haikei.css" type="text/css">
+    <meta charset="utf-8">
+    <meta name="description" content="基本の書き方、文字、コメント、画像、アップロードなど">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name=”author” content=”koma”>
+</head>
+
+<body>
+    <h1>HTMLきほん<img src="../pic/shigoto2m2.png" alt="pc操作中" width="80" height="80" class="tpg"></h1>
+    <ul>
+        <li class="pn"><a href="../index.html"target="_blank">web制作・webライフ</a>&gt;</li>
+        <li class="pn">HTMLきほん</li>
+    </ul>
+    <P class="ch">
+        <script type="text/javascript">
+            <!--
+            var weeks = new Array('日', '月', '火', '水', '木', '金', '土');
+
+            var lastup = new Date(document.lastModified);
+
+            var year = lastup.getFullYear(); // 年
+            var month = lastup.getMonth() + 1; // 月
+            var day = lastup.getDate(); // 日
+            var week = weeks[lastup.getDay()]; // 曜日
+
+
+            // 表示開始
+            document.write('更新日：' + year + '年' + month + '月' + day + '日');
+            // 表示終了
+
+            // 
+
+            -->
+        </script>
+    </P>
+    <h2>目次</h2>
+    <div class="flco">
+        <div class="flei">
+            <a href="#html-moji">
+                文字(色、
+                <br>
+                大きさなど)
+                <br>
+                について
+                <br>
+                <IMG src="../nai-link.gif">
+            </a>
+        </div>
+        <a href="#gzu">
+            <div class="flei">
+                HTML画像
+                <br>
+                (要素と属性、
+                <br>
+                サイズなど)
+                <br>
+                のとこへ<Img src="../nai-link.gif">
+            </div>
+        </a>
+
+        <div class="flei">
+            <a href="#html-hyouji">
+                コメント、空白
+                <br>
+                など表示
+                <br>
+                について
+                <br>
+                <IMG src="../nai-link.gif">
+            </a>
+        </div>
+    </div>
+    <h2>はじめに</h2>
+    
+       
+        テキストエディタを準備し、テキストエディタにそれぞれHTML、CSSを記述し、HTMLファイル、CSSファイルを作ります
+        
+       
+       
+     
+   
+    <div class="cc">
+    <p>
+        <span class="sample">HTML</span> 文字や画像などwebサイトの中身や骨格になります。
+    </p>
+    <span class="sample">CSS</span> 色や大きさ、余白など設定。webサイトの装飾になります。
+    <br>
+    HTMLと同じファイルに記述できますが、通常、HTMLファイルとは別にCSSファイルを作成します。
+</div>
+<span class="dai">テキストエディタ</span>
+テキストエディタには「atom」,「Sublime Text」,「TeraPad」など多数あり,
+無料のものも多くあります。
+
+<ul class="yohaku">
+    <li>
+    <A href="../editor/atom.html" target="_blank">
+        「atom」のとこへ
+        <IMG src="../nai-link.gif">
+    </A></li>
+    <li>
+<a href="../editor/vscode.html" target="_blank">
+  
+        「VSCode」
+       
+        のとこへ
+
+       
+        <IMG src="../nai-link.gif">
+   
+</a></li>
+<li>
+<a href="../editor/Brackets.html" target="_blank">
+「Brackets」
+        のとこへ
+        
+
+        <IMG src="../nai-link.gif">
+        </a></li>
+        <li><span class="sample">TeraPad</span> 非常に軽く、シンプルで扱いやすいエディタです。
+</li>
+</ul>
+    <h3>htmlの書き方の基本</h3>
+    <p>
+        「ファイル名.html」として保存します。
+    </p>
+    <div class="cc">
+        <span class="dai">
+            index.html
+        </span>
+        <p class="kt">
+            サイトのトップページのファイル名は index.htmlにする。
+        </p>
+    </DIV>
+    <span class="dai">&lt;html&gt;～&lt;/html&gt;</span>
+    あいだに&lt;head&gt;～&lt;/head&gt;や&lt;body&gt;～&lt;/body&gt;など、すべての内容を記述します。
+
+    <div class="cc" >
+    <span class="dai3">DOCTYPE宣言(ドックタイプ宣言)</span>
+    「Document Type Definition」（DTD）のこと。<span class="aaa">HTMLの初めに記述します</span>
+
+    <p class="kt">文書がどのバージョンのHTMLで、どの仕様で作られているのかをブラウザに伝えるためのもの。
+        
+    </p>
+    
+    
+           
+          
+           <b>&lt;!DOCTYPE html&gt;</b>
+        
+</div>
+<div class="cc">
+    <span class="dai3">lang属性</span>
+    lang属性で言語を指定します。
+    <br>
+    <span class="aaa">日本語の場合は<B>&lt;lang="ja"&gt;</B></span>、英語の場合は&lt;lang="en"&gt;
+    <p class="kt">
+    &lt;html lang="ja"&gt;～&lt;/html&gt;
+</p>
+</div>
+    <span class="dai">&lt;head&gt;～&lt;/head&gt;</span>
+    <p class="kt">
+    cssファイル名など、webサイトの情報、設定などを記述します。 </p>
+    <p>
+
+        <span class="sample">&lt;link rel="stylesheet" href="cssファイル名" type="text/css"&gt;&lt;/style&gt;</span> CSSファイルを適用させます
+
+        <br>
+        <span class="sample">metaタグ</span>
+        <span class="aaa"> webページの設定や情報等を伝えるタグ</span>。文字化けしないための文字コードやスマホ対応のコードを記述します。<A href="meta.html" target="_blank">metaタグへ<IMG src="nai-link.gif"></A>
+        
+    </p>
+    
+      
+    
+    <span class="sample3">&lt;title&gt;～&lt;/title&gt;</span>
+    <span class="aaa">ブラウザのタブや検索エンジンの検索に表示されます。SEO的にも重要になります。</span>
+    各ページごとにつけます。
+    <br>
+    30字以内で記述しましょう。この文字数を超えると一部が省略されます。
+
+    <span class="dai3">&lt;body&gt;～&lt;/body&gt;</span>あいだに本文を記述します。
+
+
+    <h2>要素について</h2>
+    <span class="sample">要素</span>　見出しや段落などのこと。タグと中身を合わせた全体
+
+    <div class="cc">
+        <span class="dai">ブロックレベル要素</span>
+        <p class="sty">
+            <span class="aaa">文書の骨組みとなる要素です。</span>箱のようなもの
+            <br>
+            見出し要素（h1, h2, h3など）、p、ul、li、div、table など。
+        </p>
+        <span class="aaa">縦に積まれていく表示になります。基本的に横に並べることはできない</span>
+    </div>
+
+    <div class="cc">
+        <span class="dai">インライン要素</span>
+        <span class="aaa">ブロックレベル要素の中身として使われる要素です。
+            <BR>
+        </span>a、span、img、strong など。
+
+        <p class="kt">
+            行のようなもので横にならぶ表示になります。
+        </p>
+    </div>
+    <H2 id="html-moji">フォント　文字</h2>
+    <ul>
+        <li><span class="sample">
+                文字ちょうせい</span>　<span class="aaa">太字&lt;B&gt;、斜体&lt;I&gt;、下線&lt;U&gt;,削除線&lt;s&gt;など、<span class="utn">それぞれ文字をタグで囲む</span>。</span></li>
+        <br>
+        <li><span class="sample">
+                文字色の指定
+            </span>　<span class="aaa">&lt;font color="カラー名"&gt;〜&lt;/font&gt;</span></li>
+        <br>
+        <li><span class="sample">文字背景色</span>
+            　<span class="aaa">spanタグとstyle属性で文字を囲む。</span>
+            <span class="kt">&lt;span style="background-color:色"&gt;文字&lt;/span&gt;</span>
+        </li>
+        <br>
+        <li><span class="sample">
+                ページ全体の文字色の指定
+            </span>　<span class="aaa">&lt;body text="カラー名かRGB値"&gt;~&lt;/body&gt;</span>　bodyとtext属性の間に半角スペースを入れる</li>
+        <br>
+        <li><span class="sample">
+                文字の大きさを指定
+            </span>　
+            <span class="kt">
+                font要素にsize属性をつけて、値に１から７までの整数を指定します。（初期値は 3）
+                <br>
+                &lt;font size="1〜7の整数"&gt;文字&lt;/font&gt;
+            </span>
+        </li>
+    </ul>
+    <br>
+    <div class="gibs">
+        <span class="skd">外部リンク参考サイトさん</span>
+        <a href="http://masaboo.cside.com/new_html1/ht_07.htm" target="_blank">・文字ちょうせい</a>
+        　<a href="http://masaboo.cside.com/new_html1/ht_06b.htm" target="_blank">・ページ全体の文字色
+        </a>　<a href="http://www.tagindex.com/html_tag/text_font/font.html" target="_blank">・文字の大きさ</a>
+    </div>
+    <H2 id="gzu">画像</h2>
+    <div class="cc">
+        <span class="dai">画像のきほん</span>
+        <p class="kt">
+            　&lt;IMG src="画像のアドレス"　alt="画像の代わりとなるコメント"&gt;
+        </p>
+        <p class="kt">
+            <span class="aaa">IMG要素にsrc属性をつけて</span>画像のアドレスを指定。
+        </p>
+        <p class="kt">
+            alt属性は画像の読み込みに失敗した等に<span class="aaa">画像の代わりにコメントを表示する</span>。
+        </P>
+        <p class="kt">
+            img要素には、<span class="md">src属性（src="値"）とalt属性（alt="値"）が必須</span>となります。
+        </p>
+        <div class="gibs">
+            <span class="skd">外部リンク参考サイトさん</span>
+            <a href="http://masaboo.cside.com/new_html1/ht_15.htm" target="_blank">・がぞう基本</a>
+            　<a href="http://www.tagindex.com/html_tag/img/index.html" target="_blank">・がぞう設定詳細</a>
+        </div>
+    </div>
+    <div class="cc">
+        <span class="dai">サイズ</span>
+       
+        画像のサイズを指定するには、<span class="aaa">img要素にwidth属性とheight属性をつけ値をピクセル数またはパーセントにします。</span>
+        <p class="kt">
+            &lt;img src="画像アドレス" alt="コメント" width="数値または%" height="数値または%"&gt;
+        </p>
+        画像の表示サイズは小さく出来ますが、<span class="aaa">ファイルサイズ、データ量そのものは変わりません。</span>
+        <p class="sty">
+            <span class="aaa">サイズを指定するとブラウザの読み込みスピードが多少速くなる</span>ので、必ず指定する。
+        </p>
+        <span class="orj">外部リンク参考サイトさん</span>　<a href="http://www.tagindex.com/html_tag/img/img_width.html" target="_blank">サイズ設定について</a>
+    </div>
+    <div class="cc">
+        <span class="dai">スタイルの調整</span>
+        余白や位置などを調整したい時は
+        <br>
+cssで設定しIMG要素にclassをつけます。
+        <p class="kt">
+        &lt;img src="画像アドレス" alt="コメント" width="数値または%" height="数値または%"class="クラス名"&gt; 
+    </p>
+    </div>
+    <h2 id="html-hyouji">表示についてなど</h2>
+    <div class="cc">
+        <span class="dai">
+            htmlのコメント</span>
+        <p class="kt">&lt;!--コメント文--&gt;</p>
+        テキストエディタ内だけの表示になり、ブラウザでは表示されません。
+        <span class="orj">外部リンク参考サイトさん</span>
+        <a href="http://masaboo.cside.com/new_html1/ht_41.htm" target="_blank">コメントについて</a>
+    </div>
+    <div class="cc">
+        <span class="dai">
+            「 &lt; 」</B>と<B>「 &gt; 」</B>を表示させる
+        </span>
+        通常だと「 &lt; 」と「 &gt; 」で囲むと表示されなくなりますが、表示させる。
+        <p class="kt">
+            「<」→<B>「＆ｌｔ；」</B>　「>」→<B>「＆ｇｔ；」</B>　ここではそれぞれ全角だが、半角にするとそれぞれ「<」、「>」になる
+        </p>
+    </div>
+    <div class="cc">
+        <span class="dai">空白</span>
+        <p>
+            テキストエディタ上での 「(半角)スペース」、
+            「改行」はいくつでも「1つの空白」。
+            <BR>
+            スペースキーを使って半角スペースをいくつ打っても、ブラウザ上で表示される空白は1つだけ。
+        </p>
+        ただし、<b>全角スペースは打った分だけ空白</b>が表示される。
+    </div>
+    <p>
+        <span class="sample">背景色</span>　
+        <span class="kt">&lt;BODY bgcolor="カラー名"&gt;</span>
+    </P>
+    <h2>アップロードについて</h2>
+    <p class="kt">
+        作成したHTMLファイルをweb上で見るためには、「filezilla」などが必要になります。
+    </p>
+    自分のＰＣだけ（ローカル環境と言います）で見る場合はアップロードしなくても可能です。
+   
+    <a href="#top">
+        <img src="../icon/uebutton2.png" class="tp">
+    </a>
+    <P align="center"><IMG src="../pcjoshi.png" alt="楽しくpc">
+    </P>
+    <HR color="white" ize="5">
+    <HR color="blue">
+
+</body>
+
+</html>
