@@ -1,0 +1,119 @@
+<html>
+<head>
+  <LINK rel="stylesheet" href="../css-haikei.css" type="text/css">
+    <title>HTML属性-web・アプリさくせい　気楽にチャレンジ・いろいろ確認！</title>
+    <meta name="description" content="target属性、style属性など、いろいろな属性と具体的な書き方について">
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name=”author” content=”komai”>
+</head>
+
+<body>
+<header>
+  <h1>HTML属性<img src="../pic/shigoto2m2.png" alt="pc操作中" width="80" height="80"class="tpg"></h1>
+
+</header>
+
+
+<p class="ch"><script type="text/javascript">
+<!--
+
+var weeks = new Array('日','月','火','水','木','金','土');
+
+var lastup = new Date(document.lastModified);
+
+var year = lastup.getFullYear(); // 年
+var month = lastup.getMonth() + 1; // 月
+var day = lastup.getDate(); // 日
+var week = weeks[ lastup.getDay() ]; // 曜日
+var hour = lastup.getHours(); // 時
+var min = lastup.getMinutes(); // 分
+var sec = lastup.getSeconds(); // 秒
+
+
+// 表示開始
+document.write('更新日：' + year + '年' + month + '月' + day + '日（' + week + '）');
+// 表示終了
+
+// -->
+</script>
+</P>
+
+<ul>
+<li class="pn"><a href="../index.html"target="_blank">web制作・webライフ</a> &gt;</li>
+<li class="pn">HTML属性</li>
+</ul>
+<H2 >HTML属性</h2>
+  プロパティと同じ。<span class="aaa">属性を追加することで、要素のサイズや配置などを詳細に指定できます。 </span>
+  <div class="cc" >
+  <span class="dai">&lt;要素　属性=”値”&gt;</span>
+  <p class="kt" >
+  要素との間に半角スペースで区切る
+</p>
+  <p class="kt" >
+  属性の後ろに=（イコール）を付ける
+</p>
+  <p class="kt" >
+    値は"（ダブルクオート）で囲む
+</p>
+</div>
+  <p class="kt" >
+  開始タグに書くもので<span class="utn">要素に情報を付加する</span>。開始タグのみに属性と値が記載され、終了タグには記載されません。
+</p>
+  <p class="kt" >
+要素に<span class="aaa">複数の属性をつける時は属性ごとに半角スペースを空けて</span>記述する
+</p>
+<h3>具体的な属性</h3>
+<span class="sample">
+グローバル属性</span>　すべての HTML 要素に付けることができます。class、idなど
+<div class="cc">
+<span class="sample">style属性</span>
+<br>
+<span class="aaa">cssをつかわず、要素に直接色や大きさなどスタイルを指定でき</span>、ほとんどの要素で使用することができます。
+<p class="kt">
+&lt;要素 style="色や大きさなど"&gt;　複数のスタイルを指定したい場合は、セミコロン（ ; ）で区切ります
+</div>
+<div class="cc">
+<span class="dai">
+  class属性</span>要素に対してクラスを付けることができます。　<b>&lt;要素 class="　"&gt;</b>
+  <p class="kt">
+    1つの要素に複数のクラス名を指定する時は、<span class="aaa">半角スペースで区切って"　"ですべてのクラス名を囲みます。</span>
+
+</p>
+  クラスの内容はcssに記述。
+</div>
+  <div class="cc">
+<span class="dai">
+  target属性　&lt;target="　"&gt;</span>　リンク先の表示方法を指定。<span class="aaa">a要素とhref属性と共に使うこと</span>が多い。
+<p class="kt">
+  target="_blank"　新規のウィンドウに表示,　&lt;a href="リンク先" target="_blank"&gt;
+</p>
+<p class="kt">
+  target="_self"　現在のウィンドウに表示　&lt;a href="リンク先" target="_self"&gt;
+</p>
+<span class="orj">外部リンク参考サイトさん</span>
+  <a href="http://www.dspt.net/html_tag/005_data/002.html" target="_blank">target属性の使い方</a>
+</div>
+<div class="cc">
+  <span class="dai">
+    href属性(エイチレフ属性)。</span>リンク先の<span class="aaa">URLを指定します。</span> href属性の値には相対パスと絶対パスのどちらでも指定することができます。
+<p class="kt">
+  a要素につけることが多いです。&lt;a href="urlなど"&gt;&lt;/a&gt;
+</p>
+</div>
+  <span class="dai">
+src属性
+</span>　<span class="aaa">img要素に埋め込む画像のURLやファイルパスを指定する。</span>絶対パス、相対パスどちらでも可
+<p class="kt">
+&lt;img src="urlなど"&gt;
+</p>
+
+<P align="center">
+  <IMG src="../pcjoshi.png"alt="楽しくpc" >
+  </P>
+  <a href="#top">
+    <IMG src="../icon/button.png" alt="上へボタン" width="52" height="52" class="tp">
+  </a>
+<HR color="white"ize="5"><HR color="blue">
+</body>
+</html>
