@@ -1,0 +1,98 @@
+<html>
+<head>
+  <LINK rel="stylesheet" href="../css-haikei.css" type="text/css">
+    <title>OGPの説明、具体的な書き方について</title>
+    <meta name="description" content="OGPの設定">
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name=”author” content=”komai”>
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1S5ZLCQ35K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1S5ZLCQ35K');
+</script>
+
+<body>
+<header>
+  <h1>OGP<img src="../pic/shigoto2m2.png" alt="pc操作中" width="80" height="80"class="tpg"></h1>
+
+</header>
+<div align="right">
+
+<p class="ch"><script type="text/javascript">
+<!--
+
+var weeks = new Array('日','月','火','水','木','金','土');
+
+var lastup = new Date(document.lastModified);
+
+var year = lastup.getFullYear(); // 年
+var month = lastup.getMonth() + 1; // 月
+var day = lastup.getDate(); // 日
+var week = weeks[ lastup.getDay() ]; // 曜日
+
+
+// 表示開始
+document.write('更新日：' + year + '年' + month + '月' + day + '日（' + week + '）');
+// 表示終了
+
+// -->
+</script>
+</P>
+</div>
+<ul>
+<li class="pn"><a href="shinhtmlskuse-ge.html"target="_blank">web制作・webライフ</a> &gt;</li>
+<li class="pn"><a href="html-meta.html"target="_blank">metaタグ</a> &gt;</li>
+<li class="pn">OGP</li>
+</ul>
+<h2>OGP基本</H2>
+
+    OGPの正式名称は”Open Graph Protocol”と言います。
+    <p class="kt">
+      facebookやmixi、Twitterなどの<span class="aaa">SNSとウェブページを連携させる為に</span>設定します
+</p>
+<p class="kt fir" >
+  ページのタイトル・URL・概要・アイキャッチ画像（サムネイル）を正しく表示させる
+</p>
+  <span class="aaa">property属性は、SNSでシェアされたときに表示するサイト情報を指定する。主にOGPで使用される</span>
+  <BR>
+OGPは新たなものが追加されるなど変更も多い
+<BR>
+<h2>具体的なタグ&書き方</H2>
+  <p class="kt">
+    OGPはhtmlのhead内にmetaタグで記述する
+    </p>
+<span class="sample">og:site_name（サイト名）</span>
+  <span class="aaa">&lt;meta property="og:site_name" content="サイト名" &gt;</span>
+  <BR>
+<p>
+  <span class="sample">og:type（ページの種類）</span>
+<span class="aaa">&lt;meta property="og:type" content="ページの種類"&gt;</span>
+<br>
+ページの種類は「article（記事ページ）」、「website（ウェブサイト）」を設定するとよいでしょう。
+</p>
+
+<span class="sample">og:image（画像を指定）</span>
+シェアされたときなどに表示する画像を決めることができます。<span class="aaa">画像の指定は絶対パスで行う</span>。
+<p>
+
+<span class="sample">og:url</span>
+  <span class="aaa">ページのURLを指定します。URLの指定方法は絶対パスで行う</span>
+</p>
+<h3>Twitterカード</H3>
+  Twitterカードを有効にするにはTwitterが提供しているCard Validatorで申請を行う必要があります。
+1度行えば今後は必要ありません。
+</div>
+<a href="#top"><!aタグでアイコンを囲む>
+<img src="../icon/uebutton2.png" class="tp">
+</a>
+<P align="center"><IMG src="../pcjoshi.png" >
+</P>
+</body>
+</html>
