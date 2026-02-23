@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<head>
+
+<title>metaタグ スマートフォンでの表示、文字コードなど</title>
+<LINK rel="stylesheet" href="../css-haikei.css" type="text/css">
+  <meta charset="utf-8">
+  <meta name="description" content="基本の書き方や、いろいろな属性、SEO対策など">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="refresh" content="400">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1S5ZLCQ35K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1S5ZLCQ35K');
+</script>
+
+<body>
+<h1>メタタグ<img src="../pic/shigoto2m2.png" alt="pc操作中" width="80" height="80"class="tpg"></h1>
+  <p class="ch">
+  <script type="text/javascript">
+var weeks = new Array('日','月','火','水','木','金','土');
+
+var lastup = new Date(document.lastModified);
+
+var year = lastup.getFullYear(); // 年
+var month = lastup.getMonth() + 1; // 月
+var day = lastup.getDate(); // 日
+var week = weeks[ lastup.getDay() ]; // 曜日
+
+
+
+// 表示開始
+document.write('更新日時：<b>' + year + '年' + month + '月' + day + '日（' + week + '）');
+// 表示終了
+// -->
+</script>
+</P>
+</header>
+<nav>
+<ul>
+<li class="pn"><a href="../index.html" target="_blank">web制作・webライフ</a> &gt;</li>
+<li class="pn">メタタグ</li>
+</ul>
+</nav>
+<section>
+<h2>目次</h2>
+<div class="flco">
+  <a href="#description">
+     <div class="flei">
+        ”description”
+      <br>
+          説明文へ
+      <br>
+          <IMG src="../nai-link.gif" >
+      </div>
+  </a>
+<a href="#smpg">
+<div class="flei">
+  スマートフォン
+<br>
+  などの画面
+<br>
+  表示設定へ
+<br>
+  <IMG src="../nai-link.gif" >
+</div>
+</a>
+
+<a href="#refresh">
+  <div class="flei">
+"リロード（更新）"
+<br>
+"リダイレクト"
+<br>
+設定
+<br>
+  <IMG src="../nai-link.gif" >
+</div>
+</a>
+  <a href="html-ogp.html" target="_blank">
+<div class="flei">
+    「OGP」
+<br>
+    基本、書き方
+<br>
+    <IMG src="../nai-link.gif" >
+</div>
+</a>
+  </div>
+</section>
+  <h2>meta基本</h2>
+<p>
+  <p class="kt">webページの<span class="aaa">設定や情報等</span>を伝えるHTMLファイルの<span class="md">headタグ内</span>に記述するタグのこと</span>。
+    <br>
+    ページ全体に適用します。
+</p>
+メタデータを記述する時は <span class="aaa">
+<B>name属性、http-equiv属性、charset属性</B>のうち、少なくとも一つを指定する必要があります</span>。
+<span class="aaa">
+  <p class="kt" >
+    「name属性」「、http-equiv属性」を使用する際には、必ず「content属性」を付けます。
+  </p></span>
+
+<div class="gibs">
+  <span class="skd">外部リンク参考サイトさん</span>
+<a href="http://www.yuu-diaryblog.com/hp-web/html-taglist/tag-meta/" target="_blank">　・メタタグの種類</a>
+
+　<a href="https://dekiru.net/article/12853/" target="_blank">・メタタグ</a>　見やすいです。
+　<a href="http://blog.cntlog.net/?p=1067" target="_blank">・メタタグ</a>　専門的
+</div>
+  <h3>name属性</H3>
+  <p class="kt" >種類をname属性で決め、content属性で具体的な内容、値を指定します</p>
+  <div class="cc" >
+  <span class="sample">&lt;meta name="keywords"&gt;</span>  
+  <br>
+webページに関するキーワードになります。  Googleの検索エンジンは、「keywords」を見ていません
+</div>
+<div class="cc" >
+  <span class="dai" id="description">description</span>
+  <p class="kt" >
+  &lt;meta name="description" content="説明文"&gt;
+  </p>
+<p class="kt" >
+  webページの内容を説明します。この説明文を「スニペット」と言います。
+
+  <A href="dodai-parts.html#snippet" target="_blank">「スニペット」について<IMG src="../nai-link.gif"></A>
+</p>
+<span class="aaa">content属性で内容を指定します。</span>
+PCでは、120文字以内。スマートフォンでは、50文字以内の表示になります。
+<br>
+なるべく検索されるキーワードを含むようにします。
+<p class="kt">
+グーグルなどの検索結果の説明文に掲載されるもので、”とても重要”です。
+</p>
+  Googleの検索エンジンは、「description」を見ていませんが、
+  <br>
+  ユーザーは説明文からクリックするか判断するので、<span class="aaa">わかりやすく記述することが大切です。</span>
+</p>
+</div>
+
+    <div class="cc" >
+
+      <span class="dai">
+  &lt;meta name=”author” content=”作者名”&gt;
+</span>
+<span class="aaa">content属性にHTMLの著作情報を書きます。</span>
+webサイト制作者名など
+</div>
+<span class="sample">meta name="viewport"</span>画面表示領域の指定になります。
+<h3>content属性</H3>
+  name属性の後ろに付けて作者名や説明文、表示領域などを記述します
+
+    <h3 id="smpg">スマートフォンなど画面表示設定</H3>
+<p class="kt">
+      &lt;meta name="viewport"&gt;
+    </p>
+
+  
+    <p class="kt">
+      &lt;meta name="viewport"content="width=device-width, サイズ"&gt;
+      </p>
+  スマートフォン、タブレットなどに適用,デバイスの画面幅に合わせる
+  <BR>
+    <span class="sample">content="width=device-width"</span>　デバイスのサイズに表示を合わせる
+    <div class="cc" >
+  <p class="kt" >&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  </p>Googleで推奨されている書き方
+    </div>
+    <table border="2" cellpadding="5">
+      <tr><td><b>width=</b></td><td>表示領域の幅</td></tr>
+      <tr><td><b>min-width:</b></td><td>ブラウザ幅が指定した幅よりも大きい時に適用</td></tr>
+      <tr><td><b>min-height:</b></td><td>ブラウザの高さが指定した高さよりも大きい時に適用</td></tr>
+      <tr><td><b>max-height:</b></td><td>ブラウザの高さが指定した高さよりも小さい時に適用</td></tr>
+  
+    </table>
+    <BR>
+    <a href="../cssf/css-responsive.html"target="_blank" >レスポンシブのページへ<IMG src="../nai-link.gif" ></a>
+<section>
+<h3>charset（キャラクター・セット）属性</H3>
+  ページの文字コードを指定します。
+  <p class="kt">
+文字化け防止のための文字コード　
+&lt;meta charset="UTF-8"&gt;
+　（HTML5の場合）
+</p>
+
+<h3>http-equiv（エイチティーティーピー・イクイヴァレント）属性</H3>
+
+  ”リダイレクト”など、ウェブページの処理方法を指定できます。
+<div class="cc" id="refresh" >
+  <span class="aaa">content属性の値で指定した秒数後</span>、Webページが”リロード（更新）”、”リダイレクト”されます。
+  <p class="kt" >&lt;meta http-equiv="refresh"content="秒数;URL=リンク先URL"&gt;</p>
+  
+
+<p class="kt" >&lt;meta http-equiv="refresh" content="秒数"&gt;　リロード（更新）設定
+</p>
+
+</div>
+
+     <a href="#top">
+    <IMG src="../icon/button.png" alt="上へボタン" width="52" height="52" class="tp">
+  </a>
+  <P align="center"><IMG src="../pcjoshi.png" >
+  </P>
+  </div>
+
+</body>
+</html>
