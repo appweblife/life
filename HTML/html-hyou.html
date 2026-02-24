@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <title>HTML表のつくりかた</title>
+    <LINK rel="stylesheet" href="../css-haikei.css" type="text/css">
+    <meta charset="utf-8">
+    <meta name="description" content="【HTML】TABLEタグ,余白や色、枠など">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name=”author” content=”koma”>
+</head>
+
+<body>
+    <h1>HTML表のつくりかた<img src="../pic/shigoto2m2.png" alt="pc操作中" width="80" height="80" class="tpg"></h1>
+    <ul>
+        <li class="pn"><a href="../index.html" target="_blank">web制作・webライフ</a>&gt;</li>
+        <li class="pn">HTML表のつくりかた</li>
+    </ul>
+    <P class="ch">
+        <script type="text/javascript">
+            <!--
+            var weeks = new Array('日', '月', '火', '水', '木', '金', '土');
+
+            var lastup = new Date(document.lastModified);
+
+            var year = lastup.getFullYear(); // 年
+            var month = lastup.getMonth() + 1; // 月
+            var day = lastup.getDate(); // 日
+            var week = weeks[lastup.getDay()]; // 曜日
+
+
+            // 表示開始
+            document.write('更新日：' + year + '年' + month + '月' + day + '日');
+            // 表示終了
+
+            // 
+
+            -->
+        </script>
+    </P>
+
+    <h2>表の作成　きほん</h2>
+    TABLEタグを使用します。
+    <b>&lt;table&gt;&lt;/table&gt;</b>で囲む。　tableタグ単体では動作しません。
+    <br>
+    「TABLEタグ」の中で<span class="aaa">一行を指定する<b>「TRタグ」</b>や、セル（1マス）を指定する<b>「TDタグ」</b>など</SPAN>で囲む
+
+    <p class="kt">
+        &lt;TR&gt;～&lt;/TR&gt;の範囲内が一行になり,
+        その中に必要な数だけセルを&lt;TD&gt;～&lt;/TD&gt;で記入する
+    </p>
+    <div class="cc">
+        <span class="dai">基本形</span>
+        <p class="kt">
+            <span class="aaa">行を表すtrタグ、さらにマスを表すtdタグ</span>があって表ができる。<span class="aaa">基本はtable,tr,tdが一つのセット</SPAN>となる。
+        </p>
+
+        &lt;table&gt;
+        <br>
+        &lt;TR&gt;&lt;TD&gt;&lt;/TD&gt;&lt;TD&gt;&lt;/TD&gt;&lt;/TR&gt;
+        <br>
+        &lt;TR&gt;&lt;TD&gt;&lt;/TD&gt;&lt;TD&gt;&lt;/TD&gt;&lt;/TR&gt;
+        <br>
+        &lt;TR&gt;&lt;TD&gt;&lt;/TD&gt;&lt;TD&gt;&lt;/TD&gt;&lt;/TR&gt;
+        <br>
+        &lt;/table&gt;
+    </div>
+    <h2>いろいろオプション</h2>
+    <p class="kt">
+        「TABLEタグ」に属性を複数つける場合、半角スペースで区切る。
+    </p>
+
+
+    <h3>表に外枠をつける。</h3>
+
+    <p class="kt fir">
+        &lt;table border="数値"&gt;表の中身 &lt;/table&gt;
+    </p>
+
+    <b>外枠の太さ</b>を設定。
+    設定しない場合は「border="0"」となり表の枠は表示されない
+    <div class="cc">
+        <span class="dai">例</span>
+        <table border="1">
+            <tr>
+                <td>サンプル</td>
+                <td>サンプル</td>
+            </tr>
+            <tr>
+                <td>サンプル</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <h3>見出しをつける。</h3>
+
+    <p class="kt">
+        一番上のセルを「TDタグ」ではなく<b>「THタグ」</b>で囲む。
+    </p>
+    <span class="aaa">見出しになったセルは太字になりセンタリングされます。「THタグ」も「trタグ」で囲みます</span>
+    <div class="cc">
+        <span class="dai">例</span>
+        &lt;table&gt;
+        <br>
+        &lt;TR&gt;&lt;Th&gt;&lt;/Th&gt;&lt;Th&gt;&lt;/Th&gt;&lt;/TR&gt;
+        <br>
+        &lt;TR&gt;&lt;TD&gt;&lt;/TD&gt;&lt;TD&gt;&lt;/TD&gt;&lt;/TR&gt;
+        <br>
+        &lt;/table&gt;
+        <table border="1" class="ue-ake">
+            <tr>
+                <th>サンプル</th>
+                <th>サンプル</th>
+            </tr>
+            <tr>
+                <td>サンプル</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <h3>表にタイトルをつける</h3>
+
+    　<B>&lt;caption&gt;タイトル名&lt;/caption&gt;</B>　<span class="aaa">表の上部に表示
+    </span>されます。
+    <p class="kt">
+        「captionタグ」は<span class="aaa">「tableタグ」と行を表す「trタグ」の間</span>に記載します。
+    </p>
+    <div class="cc">
+        <span class="dai">例</span>
+        &lt;table&gt;
+        <br>
+        &lt;caption&gt;タイトル名&lt;/caption&gt;
+        <br>
+        &lt;TR&gt;&lt;Th&gt;&lt;/Th&gt;&lt;Th&gt;&lt;/Th&gt;&lt;/TR&gt;
+        <br>
+        &lt;TR&gt;&lt;TD&gt;&lt;/TD&gt;&lt;TD&gt;&lt;/TD&gt;&lt;/TR&gt;
+        <br>
+        &lt;/table&gt;
+        <table border="1" class="ue-ake">
+            <caption>タイトル名</caption>
+            <tr>
+                <th>サンプル</th>
+                <th>サンプル</th>
+            </tr>
+            <tr>
+                <td>サンプル</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <h3>セル内の余白・間隔</h3>
+
+    CSSでも指定できます
+
+    　tableタグに<b>「cellpadding属性」</b>。
+
+    <p class="kt">&lt;table cellpadding="pxまたは%"&gt;表の中身&lt;/table&gt;
+    </p>
+    <div class="cc">
+        <span class="dai">例</span>
+        &lt;table border="1" cellpadding="10"&gt;
+        <br>
+        &lt;caption&gt;タイトル名&lt;/caption&gt;
+        <br>
+        &lt;TR&gt;&lt;Th&gt;&lt;/Th&gt;&lt;Th&gt;&lt;/Th&gt;&lt;/TR&gt;
+        <br>
+        &lt;TR&gt;&lt;TD&gt;&lt;/TD&gt;&lt;TD&gt;&lt;/TD&gt;&lt;/TR&gt;
+        <br>
+        &lt;/table&gt;
+        <table border="1" cellpadding="10" class="ue-ake">
+            <caption>タイトル名</caption>
+            <tr>
+                <th>サンプル</th>
+                <th>サンプル</th>
+            </tr>
+            <tr>
+                <td>サンプル</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <p>
+        <span class="orj">外部リンク参考サイトさん</span>
+        <a href="http://www.tagindex.com/html_tag/table/table_cellpadding.html" target="_blank">セル内余白（パディング）</a>　
+    </p>
+    <h3>表背景に色をつける</h3>
+
+    <p class="kt">
+        　&lt;table bgcolor="カラー名またはRGB値"&gt;表の中身&lt;/table&gt;　
+    </p>
+    table要素に<b>「bgcolor属性」</b>をつける
+
+    <h3>外部リンク参考サイトさん</h3>
+    <a href="http://masaboo.cside.com/new_html1/ht_27.htm" target="_blank">・表の入れ方</a>
+    　<a href="http://www.dspt.net/html_tag/006_data/001.html" target="_blank">・表作成</a>
+    　<a href="http://www.dspt.net/html_tag/006_data/001.html" target="_blank">・表背景色</a>
+    　<a href="http://www.dspt.net/html_tag/006_data/011.html" target="_blank">
+        ・タイトル</a>
+    　<a href="http://www.dspt.net/html_tag/006_data/023.html" target="_blank">・見出し</a>
+    <h2>CSSでの設定</h2>
+    <P align="center">
+        <IMG src="../pcjoshi.png" alt="楽しくpc">
+    </P>
+    <a href="#top">
+        <IMG src="../icon/button.png" alt="上へボタン" width="52" height="52" class="tp">
+    </a>
+</body>
+
+</html>

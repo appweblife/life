@@ -483,3 +483,6 @@ ol.yohaku-dai2 li {
     height: 150px;
     background: linear-gradient(#6f1f9f, rgb(21, 63, 212));
 }
+
+/* 画像レスポンシブ設定*/
+img {  max-width: 100%; height: auto; } 
