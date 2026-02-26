@@ -1,0 +1,306 @@
+<html>
+<head>
+
+<title>セッション＆クッキー-web制作・webライフ</title>
+<meta charset="utf-8">
+<meta name="description" content="クッキーの設定,キャッシュについてや、セッションやクッキーのプログラムの書き方など">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<LINK rel="stylesheet" href="../css-haikei.css" type="text/css">
+</head>
+
+<body>
+<h1>セッション＆クッキー<img src="../pic/shigoto2m2.png" alt="pc操作中" width="80" height="80"class="tpg"></h1>
+  <P class="ch">
+    <script type="text/javascript">
+  <!--
+
+  var weeks = new Array('日','月','火','水','木','金','土');
+
+  var lastup = new Date(document.lastModified);
+
+  var year = lastup.getFullYear(); // 年
+  var month = lastup.getMonth() + 1; // 月
+  var day = lastup.getDate(); // 日
+  var week = weeks[ lastup.getDay() ]; // 曜日
+  // 日付
+  document.write('更新日：' + year + '年' + month + '月' + day + '日（' + week + ')');
+
+
+  // -->
+  </script>
+  </P>
+  <ul>
+  <li class="pn"><a href="../index.html"target="_blank">web制作・webライフ</a> &gt;</li>
+  <li class="pn">セッション＆クッキー</li>
+  </ul>
+<h2>目次</h2>
+<div class="flcom">
+  <a href="#cookiemukou">
+  <div class="flei">
+  cookie
+  <br>
+  無効化
+  <br>
+  <img src="../nai-link.gif">
+  </div>
+  </a>
+    <a href="#logprogram">
+    <div class="flei">
+    ログイン、
+    <br>
+    ログアウト
+    <br>
+    プログラム
+    <br>
+  のとこへ  <img src="../nai-link.gif">
+    </div>
+    </a>
+  </div>
+  </div>
+<h2>セッション</h2>
+<p class="kt fir">
+<span class="aaa">サーバーに</span>一時的にWebでの「ログイン情報」や「最終アクセス」など、ユーザーデータを保存する仕組み
+</p>
+複数のページ間で変数を共有する。
+<bR>
+
+<span class="sample2">セッションID</span> サーバーがランダムに作成する文字列
+<p class="kt fir">
+Cookieはブラウザ側に保存されるため、データ改ざんの可能性もありセッションの方がセキュリティ的に安全。
+</p>
+
+<h2>クッキー</h2>
+<p class="kt fir">
+クッキーとは、<span class="aaa">Webサーバーからブラウザに送信したデータを保存</span>する機能。
+</p>
+<p class="kt fir">
+<span class="aaa">Cookieはブラウザ側、セッションはサーバー側</span>と、それぞれデータの保存場所が異なる
+</p>
+<div class="cc">
+  <span class="dai">cookieの機能</span>
+<p class="kt">
+  訪問者がそのページに何回訪れたか記録して表示する。
+</p>
+<p class="kt fir">
+  入力したユーザー名などを記録しておき、次回訪問時にユーザー名などの入力を省略することができる。
+<br>
+  また、<span class="aaa">オンラインショップで購入した履歴</span>などを保存することができます
+</p>
+サーバーから送られてきたCookieを保持したり、サーバー側にCookieを送る機能は、
+<span class="aaa">ブラウザがCookieに対応していなければ何度アクセスしても初回の訪問とみなされます。</span>
+</div>
+  サイト毎に情報を保存したもので、<span class="aaa">サイト訪問者のパソコンに</span>テキストデータとして保存されます。
+  <p>
+  <span class="sample">ファーストパーティ</span>　ユーザが<span class="aaa">直接閲覧しているサイト</span>のこと。
+</p>
+  <span class="sample">サードパーティ</span>　ユーザが閲覧しているサイト内にある別のサイトのこと。
+  バナー広告など。</span>
+
+    <p>
+<span class="orj">外部リンク参考サイトさん</span><a href="http://bashalog.c-brains.jp/08/05/20-175803.php" target="_blank">クッキーの仕組み</a>
+</p>
+
+<h3 id="cookiemukou">cookieを無効</h3>
+<p class="kt">
+Cookieを無効にすると利便性は下がりますが、安全にWebサイトを利用できることもあります。
+</p>
+<p class="kt">
+cookieを無効にするとログイン等ができなくなることもあります。
+</p>
+<p class="kt">
+ユーザーによっては<span class="aaa">ブラウザのCookieをOFFにしている</span>場合があるので、Cookieは保存されないこともあります。
+</p>
+<div class="cc">
+  <span class="dai">
+Chrome</span>
+右上の3つの点をクリック→ [設定]
+<br>
+ →左上三本線 [詳細設定] →
+[プライバシーとセキュリティ]
+<br>
+→ [コンテンツの設定]→ [Cookie]
+<br>
+→
+[サイトに Cookie データの保存と読み取りを許可する] をオフにする。
+</div>
+<div class="cc">
+  <span class="dai">Firefoxでのcookie無効化</span>
+  右上三本線 をクリック→[オプション]
+<br>
+  →
+ 左側「プライバシーとセキュリティ」→「Cookie とサイトデータ」
+</div>
+<div class="cc">
+  <span class="dai">Android版Firefoxのcookie無効化</span>
+  「ブラウザ右上3つの点」→[設定]
+<br>
+  →
+ 「プライバシー」→「Cookie」→
+ <br>
+ <ul>
+
+ <li>有効 (トラッキング Cookie を除く)</li>
+ <li>有効 (サードパーティを除く)</li>
+ <li>無効</li>
+</ul>
+</div>
+<div class="cc">
+  <span class="dai">
+iOS(アイフォン)</span>
+「設定」→「safari」
+<br>
+→「すべてのCookieをブロック」をON
+</div>
+<h3>cookieの有効期限</h3>
+<p class="kt fir">クッキーには有効期限があり、これを過ぎるとデータを受信できても有効にはなりません。
+</p>
+
+  再びアクセスしてもクッキーが存在しないのと同じになります。
+<br>
+<span class="aaa">ユーザがログアウト操作をしていなくても，自動的にログアウトになります。</span>
+<p>
+  cookieの有効期限は通常ブラウザを終了するまで。
+</p>
+  <span class="aaa">ブラウザを終了しても、ブラウザを再度起動したときまで有効であるように有効期限を設定できます。</span>
+  <br>
+ブラウザ側の<span class="aaa">クッキー情報を削除するには、<b>有効期限に過去の時刻</b>を指定する。</span>
+<H2>トラッキング </H2>
+ユーザーのサイト閲覧情報を収集。検索エンジンなど
+<h3>トラッキングクッキー</h3>
+
+<H2>キャッシュ </H2>
+<p class="kt">
+よく使うデータへのアクセス,表示を速くするために一時的に保存する機能。
+ </p>
+  <span class="aaa">ブラウザやサーバーのキャッシュ機能では、
+    一度表示したwebページをファイルに保存することで次から、すばやく表示できる。</SPAN>
+<div class="cc" >
+  <span class="sample">
+    <a href="https://addons.mozilla.org/ja/firefox/addon/cacheviewer/"target="_blank">CacheViewer</a>　firefoxアドオン</span>
+<br>
+キャッシュを一覧表示して検索や並び替えができます。
+キャッシュされたHTML文書の全文検索が可能です。
+</div>
+<H2>プログラムの書き方 </H2>
+PHPを使用します。
+<h3>セッションの書き方</h3>
+<p class="kt fir">
+セッション機能を開始するためには、session_start関数が必要。
+<br>
+session_start関数によるセッションの開始というのは、<span class="aaa">サーバ上に保存してあるデータを呼び出すこと</span>
+</p>
+<b>「$_SESSION」</b>というスーパーグローバル変数に入力データを収納します。
+<b>session_destroy();</b>によりログアウト
+<p>
+<span class="orj">外部リンク参考サイトさん</span>
+<a href="http://techacademy.jp/magazine/4970" target="_blank">セッション書き方</a>
+</p>
+<h3>cookieの書き方</h3>
+<p class="kt fir">
+ブラウザが送信したクッキーは、<b>$_COOKIEというスーパーグローバル関数</b>で取得</span>することができます。
+</p>
+
+<div class="cc" >
+<span class="aaa">setcookie という関数を使い、( 　 )内にそのクッキーの名前・データ・有効期限を入れて書く
+</span>
+<p class="kt">
+setcookie('名前','データ',有効期限);
+</p>
+<a href="http://webkaru.net/php/set-cookie-expire/" target="_blank">クッキー有効期限設定</a>　　 time(　)+と表記
+<ul>
+  <li>
+有効期限 1時間（3600秒=60*60）</li>
+
+<li>有効期限 1日（24時間=24*60*60）</li>
+<li>有効期限　1週間　+60+60*24*7</li>
+</ul>
+<b>HTMLタグよりも前の位置に記載</b>する
+</div>
+<div class="gibs">
+<span class="orj">外部リンク参考サイトさん</span>
+<a href="http://tennensui.sakura.ne.jp/pcrikai/category3/entry22.html" target="_blank">・クッキーについて</a>
+　<a href="http://techacademy.jp/magazine/4961" target="_blank">・クッキー書き方</a>
+</div>
+<h2 id="logprogram">ログイン、ログアウトプログラム</h2>
+ファイルが3枚くらい必要
+<BR>
+<div class="cc" >
+  <span class="dai">セッション</span>
+  <BR>
+<b> session_start( )関数</b>により、セッション機能を開始。
+<p>
+セッションでの情報は、<b>$_SESSION配列</b>に格納。
+</p>
+</DIV>
+<span class="gibs">
+<span class="skd">外部リンク参考サイトさん</span>
+<a href="http://www.actlink.co.jp/text/php/15/02.html" target="_blank">・セッションを使ったログイン、ログアウト</a>　<a href="http://qiita.com/mr0505iwaki/items/cd3c6514825aa2981f73" target="_blank">・簡易ログイン</a>
+</span>
+<h3>ログイン画面（HTML)</h3>
+<p>
+・初めてのアクセスに対してログイン画面を表示　<B>（HTMLのPASSWORDformタグを使い、ID、PW入力欄と送信ボタンをそれぞれ作成。）
+</B>
+</p>
+・HTML formタグのmethod属性をPOSTにしてID,PWを送信。
+
+<h3>ログイン認証画面(PHP)</h3>
+・初めにsession_start();にて開始
+<BR>
+
+<div class="cc" >
+  <span class="dai">アカウント情報を受け取って認証するスクリプト
+  </span>
+ID、PWなど入力データを<span class="aaa">PHPのスーパーグローバル変数$_POSTで受け取る</span>。
+<p>
+そして、<span class="aaa"><B>$_POSTから$_SESSIONに格納してから</B>、
+  <BR>
+  IF構文、
+<B>&&（両方がTRUE）、!=（等しくない）、||（どちらかがTRUE）等の演算子</B>で、
+ID,PWの正誤認証し、
+</p>
+<p>
+<span class="aaa">
+  正しければ、print " "でログインメッセージを出力しログイン内容表示。
+  <BR>
+  間違っていればエラーメッセージ表示。</SPAN>
+</p>
+<p class="kt">
+・if (演算子での$_SESSIONに格納されたID,PWの正誤判定)
+  <BR>{ ログインメッセージの表示、または、エラーメッセージの表示}
+</p>
+<p class="kt">
+・if (演算子での$_SESSIONに格納されたID,PWの正誤判定)
+ <BR>
+   { ID,PWが正しい時、ログインメッセージとログイン内容の表示 }
+  <BR>
+    else {ID,PWが間違っているとき時、エラーメッセージの表示  }
+</p>
+</DIV>
+
+
+<span class="dai">エラーメッセージの出力</span>
+
+ID、PWが違っていた場合、<b>print " "</b>でエラーメッセージを出力し
+<br>
+<span class="aaa"><B>exit();を使い</B>、HTMLを含めたログイン内容ページの出力を停止する</SPAN>
+<p>
+・phpファイルの中で、phpコードの下にHTMLにてログイン内容作成。
+<BR>
+・HTMLフォームからログアウト画面(PHPファイル)へ
+</p>
+<h3>ログアウト画面（PHP)</h3>
+まず、session_start( )関数によりセッション機能を開始
+<p>
+<span class="aaa"><B>session_destroy(　　); にてセッション情報を削除し
+print "　";でログアウトを出力</B></span>
+</p>
+HTMLフォームから、ログイン画面（HTMLファイル）に戻るを作成。
+
+<a href="#top">
+<IMG src="../icon/button.png"alt="上へボタン"width="52" height="52" class="tp">
+</a>
+
+<P align="center"><IMG src="../pcjoshi.png"alt="楽しくpc" >
+</P>
+</body>
+</html>

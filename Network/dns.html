@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<title>DNSについて</title>
+<LINK rel="stylesheet" href="../css-haikei.css" type="text/css">
+  <meta charset="utf-8">
+<meta name="description" content="DNSについて">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name=”author” content=”koma”>
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1S5ZLCQ35K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1S5ZLCQ35K');
+</script>
+
+<body>
+<h1>DNSについて<img src="../pic/shigoto2m2.png" alt="pc操作中" width="80" height="80"class="tpg"></h1>
+<ul>
+<li class="pn"><a href="../index.html"target="_blank">web制作・webライフ</a>&gt;</li>
+<li class="pn">DNSについて</li>
+</ul>
+<P class="ch">
+  <script type="text/javascript">
+<!--
+
+var weeks = new Array('日','月','火','水','木','金','土');
+
+var lastup = new Date(document.lastModified);
+
+var year = lastup.getFullYear(); // 年
+var month = lastup.getMonth() + 1; // 月
+var day = lastup.getDate(); // 日
+var week = weeks[ lastup.getDay() ]; // 曜日
+
+
+// 表示開始
+document.write('更新日：' + year + '年' + month + '月' + day + '日');
+// 表示終了
+
+// -->
+</script></P>
+<h2 Id="dns">概要</h2>
+[Domain Name System]の略。
+<p class="kt">
+数字であるIPアドレスを人間が分かりやすく変換する。
+<br>
+Webサイトの表示やメールの送受信などを行う
+</p>
+<H2>DNSサーバー</H3>
+プロパイダのDNSサーバ以外にも様々なDNSサーバーを利用できます
+<br>
+必ずしも速度が上がるわけではありません。
+<br>
+<span class="sample">ルートサーバー</span>最上位サーバー
+<br>
+<span class="sample">DNSキャッシュサーバー</span>　PC等からの情報を一定期間保持する
+<H3>パブリックDNSサーバー</H3>
+<div class="cc" >
+<span class="dai">Cloudflare</span>
+セキュリティ、プライバシー的に安全。IPアドレスを記録しない。
+<ul>
+<li>IPv4</li>
+<span class="sample">優先DNSサーバー</span>1.1.1.1
+<br>
+<span class="sample">代替DNSサーバー</span>1.0.0.1
+<li>IPv6</li>
+</ul>
+</div>
+<div class="cc" >
+<span class="dai">Google Public DNS</span>
+<ul>
+<li>IPv4</li>
+<span class="sample">優先DNSサーバー</span>8.8.8.8　
+<br>
+<span class="sample">代替DNSサーバー</span>8.8.4.4
+<li>IPv6</li>
+</ul>
+</div>
+<div class="cc" >
+<span class="dai">Quad9</span>
+<ul>
+<li>IPv4</li>
+<span class="sample">優先DNSサーバー</span>9.9.9.9　
+<br>
+<span class="sample">代替DNSサーバー</span>149.112.112.112
+<li>IPv6</li>
+</ul>
+</div>
+
+</div>
+<H3>DNS over HTTPS</H3>
+<p class="kt">
+暗号化によりプライバシー保護に有効。
+</p>
+<div class="cc" >
+<span class="dai">
+firefoxでのやりかた</span>
+<ol class="yohaku">
+  <li>
+右上3本線を左クリック</li>
+<li><B>[オプション]</B></li>
+<li><B>[一般]</B></li>
+<li>右下<B>[ネットワーク設定]</B>の<B>[接続設定]</B>をクリック</li>
+<li>下<B>[DNS-over-HTTPS (DoH) を有効にする]</B> にチェック</li>
+</ol>
+</div>
+<P align="center">
+  <IMG src="../pcjoshi.png"alt="楽しくpc" >
+</P>
+<a href="#top">
+<IMG src="../icon/button.png"alt="上へボタン"width="52" height="52" class="tp">
+</a>
+
+</body>
+</html>
