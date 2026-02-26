@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<HEAD>
+<TITLE>MYSQL</TITLE>
+<meta charset="utf-8">
+<meta name="description" content="MYSQLの設定,操作やSQLについて">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css-haikei.css" type="text/css">
+<style type="text/css">
+
+</style>
+<script type="text/javascript" src="dentaku.js"></script>
+
+</HEAD>
+<BODY>
+　<h1>MYSQL<img src="../pic/shigoto2m2.png" alt="pc操作中" width="80" height="80"class="tpg"></h1>
+<ul>
+<li class="pn"><a href="../index.html"target="_blank">web制作・webライフ </a>&gt;</li>
+<li class="pn">MYSQL</li>
+</ul>
+<P class="ch"><script type="text/javascript">
+var weeks = new Array('日','月','火','水','木','金','土');
+
+var lastup = new Date(document.lastModified);
+
+var year = lastup.getYear(); // 年
+var month = lastup.getMonth() + 1; // 月
+var day = lastup.getDate(); // 日
+var week = weeks[ lastup.getDay() ]; // 曜日
+
+
+if(year < 2000) { year += 1900; }
+
+
+
+// 表示開始
+document.write('更新日時：<b>' + year + '年' + month + '月' + day + '日（' + week + '）');
+
+// 表示終了
+// -->
+</script>
+</P>
+<h2>目次</h2>
+<div class="flco">
+  <A href="#MYSQL-sousa">
+    <div class="flei">
+MYSQL操作方法
+<br>
+(データベース、
+<br>
+  テーブルなど)
+<br>
+  のとこへ<IMG src="../nai-link.gif" >
+  </div>
+      </A>
+  <A href="#SQL">
+    <div class="flei">
+SQLとクエリ
+<br>
+操作方法
+<br>
+のとこへ
+<bR>
+<IMG src="../nai-link.gif" >
+</div>
+</a>
+</div>
+<h2>MYSQL設定</h2>
+<span class="aaa">SQLは「シークエリ」または、「エスキューエル」と読む</SPAN>
+  <p>
+<span class="orj">外部リンク参考サイトさん</span>
+<a href="http://ponk.jp/php/basic/database" target="_blank">SQL説明とMySQL設定</a>
+</p>
+<h3>phpMyAdmin</h3>
+
+
+<p class="kt">
+  ブラウザ上でMySQLサーバを管理するソフトウェア
+</p>
+phpmyadminを利用するとMySQLが手軽に操作できます。
+<p class="kt">
+MySQLの操作はコマンドラインが基本となりますが、
+<span class="aaa">phpmyadminを使うとブラウザ上で操作ができます。</span>
+</p>
+<div class="cc" >
+  <span class="sample">アパッチ</span>
+  <br>
+アパッチはWEBサーバ機能を提供するもので、ブラウザからのリクエストをphpmyadminに伝えます。
+<br>
+アパッチを通じてブラウザに表示
+</div>
+
+
+<div class="cc" >
+  <span class="dai">config.inc.phpの設定</span>
+ 
+
+config.inc.phpファイルは、XAMPPのインストール先が「C:\xampp」なら下記の場所になります。
+<br>
+
+<span class="aaa"><b>C:\xampp\phpmyadmin\config.inc.php</b></span>
+<br>
+
+config.inc.phpの編集。
+「root」と「mysqlで設定したrootユーザーのパスワード」の設定。<br>
+
+[ config.inc.php ]<br>
+
+<span class="aaa">$cfg['Servers'][$i]['controluser'] = ‘root’;</span>
+<br>
+<span class="aaa">$cfg['Servers'][$i]['controlpass'] = ‘mysqlで設定したrootユーザーのパスワード’;</span>
+<p>
+・パスワードを変更後phpmyadminにログインできない時。
+<br>
+<span class="aaa">$cfg['Servers'][$i]['auth_type'] = 'config';<b>をcookieへ変更</b>が必要です。</span>
+</p>
+<span class="orj">外部リンク参考サイトさん</span>
+<a href="http://lovee7.blog.fc2.com/blog-entry-29.html" target="_blank">パスワード設定</a>　
+  
+<a href="https://php1st.com/435/" target="_blank">パスワード設定</a>
+</div>
+<h2 id="MYSQL-sousa">MYSQL操作方法</h2>
+画面上部にある SQL を選択すると、命令を入力できる画面が開きます。ここに命令を直接入力してMySQLを操作します。
+<div class="cc" >
+  <ul>
+<li><span class="sample">データベース</span>
+    <span class="aaa">エクセルではファイル</span>にあたります。データベースは複数作成することができます。</li>
+<li><span class="sample">テーブル（表）</span>　
+    <span class="aaa">エクセルではシート</span>にあたります。データベースの中に複数のテーブルを作成することができます。</li>
+<li><span class="sample">レコード</span>（行・ロウ）　
+    エクセルでは横の行にあたります。</li>
+<li><span class="sample">フィールド</span>（列・項目・カラム）　
+    エクセルでは縦の列にあたります。</li>
+  </div>
+
+  <span class="aaa">照合順序を「utf8_general_ci」にする。</span>適切でないと文字化けの原因になります。
+
+<p>
+<span class="orj">外部リンク参考サイトさん</span>
+<a href="http://www.php-labo.net/tutorial/mysql/operate.html" target="_blank">MYSQL基本操作</a>
+</p>
+<h3>データベース</h3>
+<p class="kt">
+データを登録するには、初めに「データベース」を作成しておく必要があります。
+<br>
+データが入るテーブルを作る前に、まずテーブルをまとめるデータベースを作る
+</p>
+<div class="cc" >
+<span class="dai">データベース作成</span>
+<UL>
+  <LI>画面左上のデータベースタブを選択し、データベース作成。</LI>
+<LI>SQLタブから直接<span class="aaa">SQL文を実行（SQLの場合は「発行」と言います）</SPAN></LI>
+どちらかで作成。
+</ul>
+<p>
+phpMyAdminにログインした直後は<b>操作対象のデータベースが選択されていない状態</b>です。
+<br>
+<span class="aaa">ログイン直後は、画面左のリストから操作したいデータベースを選択</span>
+</p>
+</DIV>
+
+<p class="kt fir">
+データベースで追加するデータのことを「レコード」と言います。
+</p>
+<h3>テーブル</h3>
+テーブルにはあらかじめフィールド名とそのデータ型を指定しておく必要があります。
+<div class="cc" >
+
+<span class="dai">テーブル作成</span>
+下記2種類の方法
+<br>
+○左上の構造タブから下のテーブル作成、カラム数設定
+<p>
+○<span class="aaa"><b>CREATE TABLE テーブル名(フィールド名 データ型, フィールド名 データ型, …);</b></span>
+<br>
+<span class="aaa">テーブル名の後ろに(　　）<b>;</b>セミコロンを付け、その中にフィールド名とデータ型のセットを記述。</span>
+<br>
+<span class="aaa">構造タブから、フィールドを修正、変更、削除、追加できる</SPAN>
+<p>
+<span class="aaa"><b>DROP TABLE テーブル名;</b></span> 　実行すると直ちに削除されます
+</p>
+</p>
+</div>
+<h3>データ型</h3>
+データ型には、<span class="aaa">項目に入る値の種類を書きます。
+<br>
+主に数値型・文字列型・日付と時刻型に分かれています。</SPAN>
+<div class="cc" >
+<span class="sample">主要なデータ型</span>
+<ul>
+  <li>INT　	整数</li>
+<li>VARCHAR(n)　	n文字までの文字列</li>
+<li>TEXT　	制限のほぼない文字列</li>
+<li>DATETIME　	日付と時刻</li>
+<li>DATE　	日付</li>
+<li>TIME　	時刻</li>
+</ul>
+</div>
+
+<h2 id="SQL">クエリとSQL</h2>
+<p class="kt fir">
+データの追加や更新、削除などの命令は、クエリで行います。
+<br>
+クエリを書く規則が、SQL(Structured Query Language)という言語。
+</p>　
+
+<br>
+上部SQLタブを選択<BR>
+<div class="cc" >
+  <UL>
+    <LI>レコードを追加するクエリ　
+INSERT INTO （INSERTを選択する）
+<br>
+<B><span class="aaa">INSERT INTO テーブル名(カラム１, カラム２,...) VALUES(値１, 値２,...); </SPAN></B>となります。
+<BR>
+  値をそれぞれ入力し、カンマで区切り(　　)で値全体を閉じ、最後に；セミコロン
+<p>
+  <span class="aaa">文字列を登録する場合、その文字列を「ダブルクォート」か「シングルクォート」で囲む。</SPAN>
+</p>
+  </LI>
+  <br>
+<LI>レコードを選択するクエリ　
+SELECT * FROM ・・・</LI>
+<br>
+<LI><span class="aaa">データ更新　UPDATE 　テーブル名 　SET 　カラム= 値</SPAN></LI>　更新するカラムは、コンマで区切って複数指定することができます。
+<br>
+</div>
+<span class="orj">外部リンク参考サイトさん</span>
+<a href="https://blog.codecamp.jp/phpmyadmin02" target="_blank">クエリとSQL</a>
+<a href="#top"><!aタグでアイコンを囲む>
+<img src="../icon/uebutton2.png" class="tp"></a>
+
+<P align="center"><IMG src="../pcjoshi.png"alt="楽しくpc" ></P>
+
+
+</BODY>
+</HTML>
