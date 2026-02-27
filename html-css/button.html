@@ -1,0 +1,113 @@
+<html>
+<head>
+  <LINK rel="stylesheet" href="../css-haikei.css" type="text/css">
+    <title>ボタンのつくりかた</title>
+    <meta name="description" content="HTMLとCSSを使ったボタンのつくりかた">
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name=”author” content=”komai”>
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1S5ZLCQ35K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1S5ZLCQ35K');
+</script>
+
+<body>
+<header>
+  <h1>ボタン作り方<img src="../pic/shigoto2m2.png" alt="pc操作中" width="80" height="80"class="tpg"></h1>
+
+</header>
+<ul>
+<li class="pn"><a href="../index.html"target="_blank">web制作・webライフ</a> &gt;</li>
+<li class="pn">ボタンの作り方</li>
+</ul>
+<p class="ch">
+  <script type="text/javascript">
+<!--
+
+var weeks = new Array('日','月','火','水','木','金','土');
+
+var lastup = new Date(document.lastModified);
+
+var year = lastup.getFullYear(); // 年
+var month = lastup.getMonth() + 1; // 月
+var day = lastup.getDate(); // 日
+var week = weeks[ lastup.getDay() ]; // 曜日
+
+
+
+// 表示開始
+document.write('更新日：' + year + '年' + month + '月' + day + '日（' + week + '）');
+// 表示終了
+
+// -->
+</script>
+</P>
+
+<h2>ボタンのつくりかた</h2>
+<A href="design.html#button"target="_blank">ボタンデザイン<IMG src="../nai-link.gif" ></A>
+<p>
+<span class="orj">
+外部リンク参考サイトさん
+</span>
+<A href="http://f1403008.raindrop.jp/amaoto/post-531/"target="_blank">固定ボタンのつくりかた
+</A>
+</p>
+<h3>ボタンの位置</h3>
+webページをスクロールしても同じ位置になるようにします
+<span class=dai>CSS</span>
+
+
+CSSの<b>”positionプロパティ”</b>を使用し、”値をfixed”にして表示位置を固定します。
+<br>
+上(top:)下(bottom:)
+左(left:)右(right:)でボタンの位置を決める。
+<p class="kt">
+セレクタ{position:fixed;　位置}
+</p>
+”z-indexプロパティ”にてページの前面に表示させます
+<br>
+<span class="aaa">
+要素:hover{プロパティ名:値;}	カーソルが乗ったときの状態。</span>半透明表示を「opacity」など
+
+<span class=dai>HTML</span>
+Aタグとhref属性で、ページトップなど戻る位置にリンク設定をしてボタンを囲む。
+<p class="kt">
+&lt;a href="#戻る位置"&gt;ボタン&lt;/a&gt;
+</p>
+<h3>ボタンそのもののつくりかた</h3>
+
+<span class="sample2">width:数値px;</span> 幅を指定。
+<br>
+<span class="sample2">background:カラー名;</span> ボタンの色を指定
+
+<table border="2"bgcolor="lightcyan">
+<caption><b>ボタン文字設定</b></caption>
+<tr><TD> font-size:数値px;</TD><td> 文字サイズ設定</td></tr>
+  <tr><td>font-weight:bold;</td><td>　太字設定</td></tr>
+  <tr><td>text-decoration:none;</td><td>　リンク下線を消す</td></tr>
+  <tr><td>text-align: center;</td><td>　中央配置</td></tr>
+</table>
+<div class="cc" >
+<span class=dai>セレクタ{border-radius: 数値px}</span>角を丸くする。
+<br>
+値が1つの場合は4つの角が全て同じ丸さになります。
+</div>
+<span class="orj">
+外部リンク参考サイトさん
+</span>
+<a href="http://weboook.blog22.fc2.com/blog-entry-311.html" target="_blank">ボタンつくりかた</a>
+<a href="#top">
+<img src="../icon/button.png"alt="上へボタン"width="52" height="52" class="tp">
+</a>
+<P align="center"><IMG src="../pcjoshi.png" >
+</P>
+<HR color="white"ize="5"><HR color="blue">
+</body>
+</html>

@@ -1,0 +1,281 @@
+<html>
+
+<head>
+    <LINK rel="stylesheet" href="../css-haikei.css" type="text/css">
+    <title>HTMLとCSSを使ったリスト-web・アプリさくせい　気楽にチャレンジ・いろいろ確認！</title>
+    <meta charset="utf-8">
+    <meta name="description" content="HTMLのULタグやOLタグとCSSを使ったリストの書き方。横並びや間隔、マーカーの種類など">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name=”author” content=”komai”>
+</head>
+
+<body>
+    <header>
+        <h1>リストのやりかた<img src="../pic/shigoto2m2.png" alt="pc操作中" width="80" height="80" class="tpg"></h1>
+
+    </header>
+    <ul>
+        <li class="pn"><a href="index.html" target="_blank">web制作・webライフ</a>&gt;</li>
+        <li class="pn">リストのやりかた</li>
+    </ul>
+
+    <p class="ch">
+        <script type="text/javascript">
+            <!--
+            var weeks = new Array('日', '月', '火', '水', '木', '金', '土');
+
+            var lastup = new Date(document.lastModified);
+
+            var year = lastup.getFullYear(); // 年
+            var month = lastup.getMonth() + 1; // 月
+            var day = lastup.getDate(); // 日
+            var week = weeks[lastup.getDay()]; // 曜日
+
+
+            // 表示開始
+            document.write('更新日：' + year + '年' + month + '月' + day + '日（' + week + '）');
+            // 表示終了
+
+            // 
+
+            -->
+        </script>
+    </P>
+    <H2>目次</h2>
+    <div class="flcom">
+        <a href="#oyakolist">
+            <div class="flei">
+                親子リスト
+                <br>
+                <img src="../nai-link.gif">
+            </div>
+        </a>
+        <a href="#kankaku-list">
+            <div class="flei">
+                リスト間隔
+                <br>
+                <img src="../nai-link.gif">
+            </div>
+        </a>
+        <a href="#yokonarabi-list">
+            <div class="flei">
+                リスト横並び
+                <br>
+                <img src="../nai-link.gif">
+            </div>
+        </a>
+    </div>
+    <H2>基本</h2>
+    <p>
+        <p class="kt">
+            <b>&lt;UL&gt;、&lt;LI&gt;項目&lt;/LI&gt;、&lt;/UL&gt;</b>で表記。
+            <br>
+            <b>&lt;UL&gt;と&lt;/UL&gt;の間</b>にリストの項目を&lt;li&gt;&lt;/li&gt;で囲む　
+            </span>
+        </p>
+        <span class="orj">外部リンク参考サイトさん</span><a href="http://masaboo.cside.com/new_html1/ht_49.htm" target="_blank">りすとだよ</a>
+
+        <h3>プロパティ</H3>
+        cssのプロパティを利用。
+        <div class="cc">
+            <span class="dai">
+                list-style
+            </span>
+            <p class="kt sty">
+                リストマーカーの
+                「種類」、「位置」、「画像]
+                を一括指定するプロパティです。
+                <br>
+                それぞれの値は<b>半角スペース</b>で区切って記述します。
+            </p>
+            <span class="dai ue-ake20">
+                リストマーカーの種類指定
+            </span>
+            <p class="kt">
+                ul{ list-style-type : マーカー種類; }
+            </p>
+            <span class="aaa">初期値は黒丸になります。</span>
+            <br>
+            <p class="sty">
+                <span class=sample>circle</span> 白丸　<span class=sample>square</span> 黒四角
+            </p>
+            <span class="orj">外部リンク参考サイトさん</span><a href="http://www.tagindex.com/stylesheet/list/list_style_type.html" target="_blank">リストマーカー種類</a>
+<br>
+            <span class="dai ue-ake20">リストマーカー表示位置</span>
+            <b>外側か内側</b>
+            <p class="kt">
+                ul{ list-style-position : outsideまたは、inside; }
+            </p>
+            <p class="sty">
+                <span class="orj">外部リンク参考サイトさん</span><a href="https://dekiru.net/article/13147/" target="_blank">リストマーカー位置について</a>
+            </p>
+
+
+            <span class="dai">
+                マーカーなし（CSSでの指定）
+            </span>
+            <p class="kt">
+                ul {
+                list-style-type: none;
+                }
+            </p>
+        </div>
+        <div class="cc">
+            <span class="dai">
+                数字のマーカー（olタグ）
+            </span>
+            <p class="sty">数字のマーカーの場合、HTMLで<span class="aaa">[ulタグ]の代わりに[olタグ]を使う</span>。
+            </p>
+            項目名は&lt;li&gt;、&lt;/li&gt;で囲むことは同じ。　&lt;ol&gt;　　&lt;/ol&gt;
+        </div>
+        <div class="cc">
+            <span class="dai2">
+                マーカー「白丸」または「黒四角」
+            </span>
+            <p class="kt">
+                &lt;UL type="circleまたは、square"&gt;&lt;/UL&gt;
+            </p>
+            <p class="sty">
+                HTMLでULにtype属性を使う。　<span class="orj">外部リンク参考サイトさん</span>
+                <a href="http://masaboo.cside.com/new_html1/ht_50.htm" target="_blank">HTMLでのマーカーの種類</a>
+            </p>
+        </div>
+        <div class="cc">
+            <span class="dai sty">太字にする</span>
+             
+            { font-weight: bold; }
+            <br>
+            　<span class="orj">外部リンク参考サイトさん</span>
+            <a href="http://無料ホームページ作成.jp/ul.html" target="_blank">HTMLでのマーカーの種類</a>
+        </div>
+
+        <IMG src="../pic/html-mini.jpg" alt="HTMLのコード" class="img">
+        <h2>やや応用</H2>
+
+        <h3 id="oyakolist">親リスト、子リスト</h3>
+        <p>
+            &lt;UL&gt;～&lt;/UL&gt;内の<span class="aaa">&lt;li&gt;～&lt;/li&gt;の下に&lt;UL&gt;をつけて、
+                <br>  
+                項目ごとに&lt;li&gt;～&lt;/li&gt;をつけ&lt;/UL&gt;でとじる</span>
+        </p>
+        <div class="cc">
+            <span class=sample>サンプル</span>
+            <br>
+            &lt;UL&gt;
+            <br>
+            &lt;li&gt;リスト１&lt;/li&gt;
+            
+            <br>
+            &lt;UL&gt;
+            <br>
+            &lt;li&gt;リスト1-1&lt;/li&gt;
+           
+            <br>
+            &lt;li&gt;
+            リスト1-2&lt;/li&gt;
+            <br>
+            &lt;/UL&gt;
+            
+            <br>
+            &lt;li&gt;
+        
+            リスト2&lt;/li&gt;
+            <br>
+            &lt;UL&gt;
+            <br>
+            &lt;li&gt;リスト2-1
+            &lt;/li&gt;
+            <br>
+            &lt;li&gt;リスト2-2
+            &lt;/li&gt;
+            <br>
+            &lt;/UL&gt;
+            <br> 
+            &lt;/UL&gt;
+            <br>
+            <span class=sample>表示</span>
+           
+            <UL>
+                <li>リスト１</li>
+                <UL>
+                <li>リスト1-1</li>
+                <li> リスト1-2</li>
+                </UL>
+                <li> リスト2</li>
+                <UL>
+                <li>リスト2-1 </li>
+                <li>リスト2-2 </li>
+                </UL>
+                </UL>    
+        
+        
+        
+        </div>
+           
+        <span class="orj">外部リンク参考サイトさん</span>
+        <a href="http://masaboo.cside.com/new_html1/ht_53.htm" target="_blank">子リスト作り方</a>
+    </p>
+
+    <h3 id="kankaku-list">リスト間隔</h3>
+    <span class="kt">margin-bottomで下のマージン（余白）を指定。li要素に対して設定</span>し、リスト項目の間隔を指定できます。
+    <div class="cc">
+        <p class="kt"> <span class=sample>下の余白</span>　
+            li {margin-bottom:数値 px;}
+        </p>
+        <p class="kt"><span class=sample>右横の余白</span>　
+            li {margin-right: 数値px;}
+        </p>
+    </div>
+    <div class="cc">
+        <p class="kt">
+            リスト間隔は子孫セレクタを使い、ulの中にあるliに適用する。
+            <br>
+            liの前に半角スペースを入れる。
+        </p>
+        ・CSS側
+        <p class="kt sty">
+            ul.クラス名 li{ }
+        </p>
+        ・HTML側
+        <p class="kt">
+            &lt;ul class="クラス名"&gt;
+        </p>
+    </div>
+    <div class="gibs">
+        <span class="orj">外部リンク参考サイトさん</span>
+        　<a href="../HTML/selector.html#sison" target="_blank">・子孫セレクタについて</a>
+        　<a href="http://www.tagindex.com/stylesheet/list/margin.html" target="_blank">・リスト間隔</a>
+    </div>
+
+    <h3 id="yokonarabi-list">リストの横並び</h3>
+    cssに記載する。
+    <div class="cc">
+        <span class="aaa">li要素にプロパティをdisplayにして、値をinlineにする</span>
+        <p class="kt">
+            li {display: inline;}
+        </p>
+        <p>
+            項目の間隔を広げたい場合は、<span class="aaa">水平方向のマージンを設定します。
+                <br>
+                （主に右方向）</span>
+            <span class="kt">li {display: inline;margin-right: 　px;}</span>
+        </p>
+        htmlには、classなどでulに付ける。
+    </div>
+    <div class="gibs">
+        <span class="skd">外部リンク参考サイトさん</span>
+        <a href="http://www.tagindex.com/stylesheet/list/display.html" target="_blank">・inlineでのやりかた</a>
+        　<a href="http://honttoni.blog74.fc2.com/blog-entry-52.html" target="_blank">・いろいろやりかた</a>
+    </div>
+    <P align="center"><IMG src="../pcjoshi.png" alt="楽しくpc">
+    </P>
+    <a href="#top">
+        <!aタグでアイコンを囲む>
+            <img src="../icon/button.png" class="tp">
+    </a>
+
+    <HR color="white" ize="5">
+    <HR color="blue">
+</body>
+
+</html>

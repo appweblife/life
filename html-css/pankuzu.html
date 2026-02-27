@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<title>パンくずリスト-web・アプリさくせい　気楽にチャレンジ・いろいろ確認！</title>
+<LINK rel="stylesheet" href="../css-haikei.css" type="text/css">
+<meta charset="utf-8">
+<meta name="description" content="パンくずリストのHTMLやCSSを使った書き方や意義など">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name=”author” content=”komai”>
+</head>
+
+<body>
+<h1>パンくずリスト<img src="../pic/shigoto2m2.png" alt="pc操作中" width="80" height="80"class="tpg"></h1>
+<P class="ch">
+  <script type="text/javascript">
+<!--
+
+var weeks = new Array('日','月','火','水','木','金','土');
+
+var lastup = new Date(document.lastModified);
+
+var year = lastup.getYear(); // 年
+var month = lastup.getMonth() + 1; // 月
+var day = lastup.getDate(); // 日
+var week = weeks[ lastup.getDay() ]; // 曜日
+
+
+if(year < 2000) { year += 1900; }
+
+
+
+// 表示開始
+document.write('更新日：' + year + '年' + month + '月' + day + '日');
+// 表示終了
+
+// -->
+</script></P>
+<nav>
+<ul>
+<li class="pn"><a href="../index.html"target="_blank">web制作・webライフ</a> &gt;</li>
+<li class="pn">パンくずリスト</li>
+</ul>
+</nav>
+<h2>基本</h2>
+SEO上でも重要な役割を果たします。
+<br>
+パンくずリストが設置してあるサイトは、<span class="aaa">クローラーにとってサイト内構造を理解しやすいので巡回しやすく検索で上位表示されやすい</span>。
+
+<h2>書き方</h2>
+通常はコンテンツの最上部に記載。 <span class="aaa">パンくずリストはヘッダーやサイドバーに設置する</span>のが主流。
+<br>
+HTMLとCSSで作成し、ulリストを使うやり方が多い。
+<br>
+  <h3>HTMLとCSSでつくるパンくずリスト</H3>
+    <p class="kt">
+  1,htmlでリストを作成する
+</p>
+
+  <span class="aaa">
+  <b>&lt;UL&gt;、&lt;LI&gt;項目&lt;/LI&gt;、&lt;/UL&gt;</b>で表記。
+  <b>&lt;UL&gt;と&lt;/UL&gt;の間</b>にリストの項目（リンク先名とリンク先）を&lt;li&gt;&lt;/li&gt;で囲む
+</span>
+  <p class="kt sty">
+      「 > 」は、「＆ｇｔ；」で記述します。
+    </p>
+<p class="sty kt">
+2, cssで、リストを横並びにする。
+  <br>
+<span class="sample">
+li {display: inline;}
+</span><span class="aaa">　li要素にdisplayプロパティで、inlineを値にする</span>
+</p>
+<div class="gibs">
+<span class="orj">外部リンク参考サイトさん</span>
+</span><a href="http://masaboo.cside.com/new_html1/ht_49.htm" target="_blank">・りすと作成</a>　
+<a href="http://sabasaba-club.com/contents/2638/" target="_blank">・HTMLとCSSでパンくずリストを作成</a>
+</div>
+<P align="center">
+  <IMG src="../pcjoshi.png"alt="楽しくpc" >
+  </P>
+<HR color="white"ize="5"><HR color="blue">
+</body>
+</html>
